@@ -117,6 +117,38 @@ Runs the agent using Browserbase as the browser backend. Ensure the proper Brows
 python main.py --query="Go to Google and type 'Hello World' into the search bar" --env="browserbase"
 ```
 
+## Web Scraping Examples
+
+The repository includes examples of using the Computer Use Preview framework for web scraping:
+
+### InvestorLift Property Scraper
+
+Two implementations demonstrate different approaches to web scraping:
+
+1. **scraper.py** - Direct Playwright implementation
+   - Traditional approach using Playwright selectors
+   - Manual element selection and interaction
+   - Good for understanding the scraping workflow
+
+2. **scraper_agent.py** - Framework-based implementation
+   - Uses BrowserAgent for AI-driven automation
+   - Normalized coordinate system (1000x1000)
+   - Built-in error handling and retry mechanisms
+
+**Running the scrapers:**
+
+```bash
+# Original Playwright scraper
+python scraper.py
+
+# Framework-based scraper (requires API key)
+python scraper_agent.py
+```
+
+**See also:**
+- `SCRAPER_MIGRATION.md` - Detailed migration guide between approaches
+- `.github/copilot-instructions.md` - Framework usage guidelines
+
 ## Agent CLI
 
 The `main.py` script is the command-line interface (CLI) for running the browser agent.
